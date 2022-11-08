@@ -7,13 +7,39 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
     <title>Test menu</title>
   </head>
+  <style>
+    .menu{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;
+      place-content: center;
+    }
+    .header_menuBtn{
+      position: relative;
+      z-index: 10;
+    }
+    .Btnnavclose{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #ffffff;  
+      isplay:inline;
+      place-content: start right;
+    }
+  </style>
   <body>
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
     <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen">Menu</button>
-      <nav id="mainNav" x-show="menuIsOpen">
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="hearder_menuBtn">Menu</button>
+      <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
         <ul>
+          <img src="icon.png" class="Btnnavclose">
           <li><a href="#">item</a></li>
           <li><a href="#">item</a></li>
           <li><a href="#">item</a></li>

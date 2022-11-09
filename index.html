@@ -1,53 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="styles/styles.css"/>
+
     <title>Test menu</title>
   </head>
-  <style>
-    .menu{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #ffffff;
-      place-content: center;
-    }
-    .header_menuBtn{
-      position: relative;
-      z-index: 10;
-    }
-    .Btnnavclose{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #ffffff;  
-      isplay:inline;
-      place-content: start right;
-    }
-  </style>
   <body>
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
-    <header>
-      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="hearder_menuBtn">Menu</button>
+    <header x-data="{menuIsOpen: false,testisopen: false}">
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
       <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
         <ul>
-          <img src="icon.png" class="Btnnavclose">
           <li><a href="#">item</a></li>
           <li><a href="#">item</a></li>
           <li><a href="#">item</a></li>
         </ul>
       </nav>
-    
-
-      
       <h1>Test de menu</h1>
     </header>
     <!-- h2>lorem2^p>lorem -->
@@ -58,5 +31,21 @@
       nemo aliquid pariatur quam voluptates animi laudantium, aperiam
       consectetur nobis enim.
     </p>
+    <dl x-data="{FirstDlIsOpen: false}">
+      <dt aria-controls="FristDl"  @click="FirstDlIsOpen = ! FirstDlIsOpen">Lorem.</dt>
+      <div id="FristDl" x-show="FirstDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Lorem ipsum dolor sit amet.</dd>
+      </div>
+     </dl>
+     <dl x-data="{TwoDlIsOpen: false}">
+      <dt aria-controls="TwoDl"  @click="TwoDlIsOpen = ! TwoDlIsOpen">Minima.</dt>
+      <div id="TwoDl" x-show="TwoDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Fugit doloremque unde a reprehenderit.</dd>
+      </div>
+     </dl>
+     <dl x-data="{ThreeDlIsOpen: false}">
+      <dt aria-controls="ThreeDl"  @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">Placeat?</dt>
+      <div id="ThreeDl" x-show="ThreeDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Fugit doloremque unde a reprehenderit.</dd>     
   </body>
 </html>

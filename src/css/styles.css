@@ -25,11 +25,11 @@
 
 
 .before1::before{
-  content: url("public/icones/UiwBaidu.svg");
+  content: url("../../public/icones/UiwAdobe.svg");
 }
 .before2::before{
-  content: url("public/icones/UiwBaidu.svg")
+  content: url("../../public/icones/UiwAdobe.svg")
 }
 .before3::before{
-  content: url("public/icones/UiwBaidu.svg");
+  content: url("../../public/icones/UiwAdobe.svg");
 }

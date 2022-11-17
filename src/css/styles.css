@@ -25,9 +25,6 @@
 nav>ul>li>a::before {
   content: url("../../public/icones/UiwAdobe.svg");
 }
-
-
-
 .before1::before{
   content: url("../../public/icones/UiwAdobe.svg");
 }

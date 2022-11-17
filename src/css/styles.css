@@ -22,12 +22,3 @@
   width: 100%;
   height: auto;
 }
-.before1::before{
-  content: url("../../public/icones/UiwAdobe.svg");
-}
-.before2::before{
-  content: url("../../public/icones/UiwFrown.svg")
-}
-.before3::before{
-  content: url("../../public/icones/UiwBaidu.svg");
-}

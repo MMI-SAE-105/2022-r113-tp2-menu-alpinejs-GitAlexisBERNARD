@@ -22,15 +22,7 @@
   width: 100%;
   height: auto;
 }
-nav>ul>li>a::before {
-  content: url("../../public/icones/UiwAdobe.svg");
-}
-nav>ul>li>a::before {
-  content: url("../../);
-}
-nav>ul>li>ul>li>a::before {
-  content: url("../../public/icones/UiwFrown.svg");
-}
+
 
 .before1::before{
   content: url("../../public/icones/UiwAdobe.svg");

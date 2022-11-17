@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="src/css/styles.css"/>
 
     <title>Test menu</title>
   </head>
   <body>
     <!-- https://emmet.io/ -->
     <!-- header>h1{Test de menu} -->
-    <header x-data="{menuIsOpen: false,testisopen: false}">
+    <header ctestisopen: false}">
       <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
       <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
         <ul>
-          <li><a href="#">item</a></li>
-          <li><a href="#">item</a></li>
-          <li><a href="#">item</a></li>
+          <li class="before1"><a href="/cats/index.html">Cats</a></li>
+          <ul>
+            <li class="before2"><a href="/cats/chat-1.html">Chat-1</a></li>
+            <li class="before3"><a href="/cats/chat-2.html">Chat-2</a></li>
+          </ul>
+          <li class="before1"><a href="/dogs/index.html">Dogs</a></li>
+          <ul>
+            <li><a href="/dogs/chien-1.html">Chien-1</a></li>
+            <li><a href="/dogs/chien-2.html">Chien-2</a></li> 
+          </ul>
         </ul>
       </nav>
       <h1>Test de menu</h1>
@@ -47,5 +54,6 @@
       <dt aria-controls="ThreeDl"  @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">Placeat?</dt>
       <div id="ThreeDl" x-show="ThreeDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
         <dd>Fugit doloremque unde a reprehenderit.</dd>     
-  </body>
+
+      </body>
 </html>

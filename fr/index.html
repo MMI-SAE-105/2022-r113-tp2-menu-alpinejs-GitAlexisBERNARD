@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="https://unpkg.com/alpinejs"></script>
-    <link rel="stylesheet" href="src/css/styles.css"/>
+    <link rel="stylesheet" href="../src/css/styles.css"/>
 
     <title>Test menu</title>
   </head>
@@ -16,7 +16,7 @@
       <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
       <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
         <ul>
-          <li class="before1"><a href="/cats/index.html">Cats</a></li>    
+          <li class="before1"><a href="cats/index.html">Cats</a></li>    
           <ul>
             <li class="before2"><a href="/cats/chat-1.html">Chat-1</a></li>
             <li class="before3"><a href="/cats/chat-2.html">Chat-2</a></li>

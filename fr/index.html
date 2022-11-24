@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/styles.css"/>
+
+    <title>Test menu</title>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header x-data="{menuIsOpen: false}">
+      <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
+      <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
+        <ul>
+          <li class="before1"><a href="/cats/index.html">Cats</a></li>    
+          <ul>
+            <li class="before2"><a href="/cats/chat-1.html">Chat-1</a></li>
+            <li class="before3"><a href="/cats/chat-2.html">Chat-2</a></li>
+          </ul>
+          <li class="before1"><a href="/dogs/index.html">Dogs</a></li>
+          <ul>
+            <li><a href="/dogs/chien-1.html">Chien-1</a></li>
+            <li><a href="/dogs/chien-2.html">Chien-2</a></li> 
+          </ul>
+        </ul>
+      </nav>
+      <h1>Test de menu v1.0</h1>
+    </header>
+    <!-- h2>lorem2^p>lorem -->
+    <h2>Lorem, ipsum.</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+      mollitia adipisci alias error laboriosam numquam incidunt magni eum eos
+      nemo aliquid pariatur quam voluptates animi laudantium, aperiam
+      consectetur nobis enim.
+    </p>
+    <dl x-data="{FirstDlIsOpen: false}">
+      <dt aria-controls="FristDl"  @click="FirstDlIsOpen = ! FirstDlIsOpen">Lorem.</dt>
+      <div id="FristDl" x-show="FirstDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Lorem ipsum dolor sit amet.</dd>
+      </div>
+     </dl>
+     <dl x-data="{TwoDlIsOpen: false}">
+      <dt aria-controls="TwoDl"  @click="TwoDlIsOpen = ! TwoDlIsOpen">Minima.</dt>
+      <div id="TwoDl" x-show="TwoDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Fugit doloremque unde a reprehenderit.</dd>
+      </div>  
+     </dl>
+     <dl x-data="{ThreeDlIsOpen: false}">
+      <dt aria-controls="ThreeDl"  @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">Placeat?</dt>
+      <div id="ThreeDl" x-show="ThreeDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
+        <dd>Fugit doloremque unde a reprehenderit.</dd>     
+
+      </body>
+</html>

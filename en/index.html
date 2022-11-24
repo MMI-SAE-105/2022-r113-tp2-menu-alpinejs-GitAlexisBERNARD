@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
       <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header__menuBtn">Menu</button>
       <nav id="mainNav" x-show="menuIsOpen"  x-transition:enter.duration.500ms x-transition:leave.duration.400ms class="menu">
         <ul>
-          <li class="before1"><a href="/cats/index.html">Cats</a></li>
+          <li class="before1"><a href="/cats/index.html">Cats</a></li>    
           <ul>
             <li class="before2"><a href="/cats/chat-1.html">Chat-1</a></li>
             <li class="before3"><a href="/cats/chat-2.html">Chat-2</a></li>
@@ -28,7 +28,7 @@
           </ul>
         </ul>
       </nav>
-      <h1>Test de menu</h1>
+      <h1>home</h1>
     </header>
     <!-- h2>lorem2^p>lorem -->
     <h2>Lorem, ipsum.</h2>
@@ -48,7 +48,7 @@
       <dt aria-controls="TwoDl"  @click="TwoDlIsOpen = ! TwoDlIsOpen">Minima.</dt>
       <div id="TwoDl" x-show="TwoDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms >
         <dd>Fugit doloremque unde a reprehenderit.</dd>
-      </div>
+      </div>  
      </dl>
      <dl x-data="{ThreeDlIsOpen: false}">
       <dt aria-controls="ThreeDl"  @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">Placeat?</dt>

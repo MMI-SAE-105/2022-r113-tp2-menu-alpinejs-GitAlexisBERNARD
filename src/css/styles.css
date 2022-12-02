@@ -9,11 +9,7 @@
     place-content: center;
 
 }
-.header__menuBtn{
-    position: relative;
-    z-index: 10;
 
-}
 .noscroll,
 .noscroll body {
   overflow: hidden;
